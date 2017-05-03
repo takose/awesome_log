@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-jawbone'
+gem 'omniauth-twitter'
 
 gem 'dotenv-rails'
 

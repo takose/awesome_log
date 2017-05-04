@@ -3,4 +3,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     ENV['JAWBONE_CLIENT_ID'], 
     ENV['JAWBONE_CLIENT_SECRET'], 
     :scope => "basic_read mood_read"
+  provider :twitter, ENV['TWITTER_API_TOKEN'], ENV['TWITTER_API_SECRET']
 end

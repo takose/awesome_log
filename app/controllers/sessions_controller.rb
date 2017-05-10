@@ -13,8 +13,9 @@ class SessionsController < ApplicationController
     when 'jawbone'
       if current_user
         user = current_user
-        jawbone_account = JawboneAccount.find_or_create_by!(
-          user_id: user.id
+        jawbone_account = AuthInfo.find_or_create_by!(
+          user_id: user.id,
+          service_id:, 'jawbone'
         )
         jawbone_account.update!(token: auth_hash['credentials']['token'])
       end

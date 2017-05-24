@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         user = current_user
         jawbone_account = AuthInfo.find_or_create_by!(
           user_id: user.id,
-          service_id:, 'jawbone'
+          service_id: Service.find_by(name: 'jawbone').id
         )
         jawbone_account.update!(token: auth_hash['credentials']['token'])
       end

@@ -70,7 +70,12 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.5)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
+    jawbone (0.4)
+      httparty (~> 0.11.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -206,6 +211,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  jawbone
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
